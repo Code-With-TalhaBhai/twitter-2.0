@@ -1,3 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .widg > * {
+    @apply w-6 h-6 cursor-pointer text-twitter hover:scale-150 transition-all duration-150 ease-out;
+  }
+  .user-section > * {
+    @apply flex cursor-pointer items-end space-x-1 text-gray-400
+  }
+  .sidebar > * {
+    @apply cursor-pointer
+  }
+}
+
+
 html,
 body {
   padding: 0;
