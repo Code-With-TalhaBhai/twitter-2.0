@@ -16,7 +16,6 @@ interface Props {
 // const Home = () => {
 const Home = ({tweets}:Props) => {
   console.log(tweets)
-  console.log(process.env.NEXT_PUBLIC_BASE_URL)
   return (
     <div className='mx-auto max-h-screen overflow-hidden lg:max-w-6xl'>
       <Head>

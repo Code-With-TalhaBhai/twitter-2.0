@@ -32,7 +32,7 @@ export default function TweetBox({setTweets}: Props) {
             mainImage: session?.user?.image || 'https://links.papareact.com/gll',
             tweetImage: imageTweet
         }
-        const result = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/addTweets`,{
+        const result = await fetch('/api/addTweets',{
             body: JSON.stringify(tweetBody),
             method: 'POST'
         })
