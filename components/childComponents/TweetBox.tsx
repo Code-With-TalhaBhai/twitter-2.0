@@ -10,7 +10,7 @@ type Props = {
 }
 
 export default function TweetBox({setTweets}: Props) {
-    const {data:session} = useSession();
+    // const {data:session} = useSession();
     const [happening, setHappening] = useState<string>('');
     const [imgBoxOpen, setimgBoxOpen] = useState<boolean>(false);
     const [imageTweet, setImageTweet] = useState<string>('');
@@ -25,11 +25,15 @@ export default function TweetBox({setTweets}: Props) {
     }
 
     const postTweet = async()=>{
-        if(session){
+        // if(session){
         const tweetBody : TweetBody = {
             tweet: happening,
-            username: session?.user?.name || 'Userknown User',
-            mainImage: session?.user?.image || 'https://links.papareact.com/gll',
+            username:
+            //  session?.user?.name ||  
+            'Userknown User',
+            mainImage:
+            //  session?.user?.image ||
+             'https://links.papareact.com/gll',
             tweetImage: imageTweet
         }
         const result = await fetch('/api/addTweets',{
@@ -46,11 +50,11 @@ export default function TweetBox({setTweets}: Props) {
         icon:"🚀"}
         )
         return json;
-        }
-        else{
-            toast("You need to login to post Tweet",
-            {icon:"🎇"});
-          }
+        // }
+        // else{
+        //     toast("You need to login to post Tweet",
+        //     {icon:"🎇"});
+        //   }
     }
 
     const handleSubmit = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
@@ -65,7 +69,10 @@ export default function TweetBox({setTweets}: Props) {
     <div className='flex'>
         <img
          className='mt-4 w-14 h-14 object-cover rounded-full'
-         src= {session?.user?.image || "https://links.papareact.com/gll"} alt=""
+         src= {
+            //  session?.user?.image ||
+              "https://links.papareact.com/gll"
+            } alt=""
         />
         {/* <div className='flex items-center flex-1 pl-2'> */}
         <div className='flex flex-col flex-1 pl-2'>
@@ -81,7 +88,8 @@ export default function TweetBox({setTweets}: Props) {
                 <CalendarIcon/>
                 <LocationMarkerIcon/>
             </div>
-            <button onClick={handleSubmit} disabled={(!happening && !imageTweet) || !session} className='bg-twitter cursor-pointer text-white font-bold rounded-full px-5 py-2 disabled:opacity-40'>Tweet</button>
+            {/* <button onClick={handleSubmit} disabled={(!happening && !imageTweet) || !session} className='bg-twitter cursor-pointer text-white font-bold rounded-full px-5 py-2 disabled:opacity-40'>Tweet</button> */}
+            <button onClick={handleSubmit} disabled={(!happening && !imageTweet)} className='bg-twitter cursor-pointer text-white font-bold rounded-full px-5 py-2 disabled:opacity-40'>Tweet</button>
             </div>
         </form>
         {imgBoxOpen &&
