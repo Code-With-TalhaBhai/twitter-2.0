@@ -69,9 +69,9 @@ export default function TweetBox({setTweets}: Props) {
     <div className='flex'>
         <img
          className='mt-4 w-14 h-14 object-cover rounded-full'
-         src= {
+         src = {
              session?.user?.image ||
-              "https://links.papareact.com/gll"
+            "https://i.ibb.co/9bSPB9S/cropimage5494.webp"
             } alt=""
         />
         {/* <div className='flex items-center flex-1 pl-2'> */}

@@ -34,7 +34,7 @@ export default function TweetComponent({tweet}: Props) {
         _type: 'reference'
       }
     }
-    const result = await fetch('/api/addComments',{
+    const result = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/addComments`,{
       body: JSON.stringify(commentBody),
       method: 'POST'
     });
