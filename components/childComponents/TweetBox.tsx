@@ -10,7 +10,7 @@ type Props = {
 }
 
 export default function TweetBox({setTweets}: Props) {
-    // const {data:session} = useSession();
+    const {data:session} = useSession();
     const [happening, setHappening] = useState<string>('');
     const [imgBoxOpen, setimgBoxOpen] = useState<boolean>(false);
     const [imageTweet, setImageTweet] = useState<string>('');
@@ -70,7 +70,7 @@ export default function TweetBox({setTweets}: Props) {
         <img
          className='mt-4 w-14 h-14 object-cover rounded-full'
          src= {
-            //  session?.user?.image ||
+             session?.user?.image ||
               "https://links.papareact.com/gll"
             } alt=""
         />

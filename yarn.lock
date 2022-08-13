@@ -757,9 +757,9 @@
     "tmp-promise" "^3.0.3"
     "uuid" "^8.3.2"
 
-"@netlify/esbuild-windows-64@0.14.25":
-  "integrity" "sha512-BgIxcEcqr4pfRc9fXStIXQVpjIkBUc3XHFEjH2t2R9pcEDU4BpMsdBgj0UA2x3Z0KtwVLLCOZDvSiaL+WkiTqA=="
-  "resolved" "https://registry.npmjs.org/@netlify/esbuild-windows-64/-/esbuild-windows-64-0.14.25.tgz"
+"@netlify/esbuild-linux-64@0.14.25":
+  "integrity" "sha512-yD579mskxDXrDR2vC7Dw/mEFTEuQoNYBcoKsIq+ctLiyQcKI1WCgAapJ+MCNpIDkmZp4O1uVuqIiMSyoMlv1QQ=="
+  "resolved" "https://registry.npmjs.org/@netlify/esbuild-linux-64/-/esbuild-linux-64-0.14.25.tgz"
   "version" "0.14.25"
 
 "@netlify/esbuild@0.13.6":
@@ -827,9 +827,9 @@
     "moize" "^6.0.0"
     "path-exists" "^5.0.0"
 
-"@netlify/local-functions-proxy-win32-x64@1.1.1":
-  "integrity" "sha512-VCBXBJWBujVxyo5f+3r8ovLc9I7wJqpmgDn3ixs1fvdrER5Ac+SzYwYH4mUug9HI08mzTSAKZErzKeuadSez3w=="
-  "resolved" "https://registry.npmjs.org/@netlify/local-functions-proxy-win32-x64/-/local-functions-proxy-win32-x64-1.1.1.tgz"
+"@netlify/local-functions-proxy-linux-x64@1.1.1":
+  "integrity" "sha512-bS3u4JuDg/eC0y4Na3i/29JBOxrdUvsK5JSjHfzUeZEbOcuXYf4KavTpHS5uikdvTgyczoSrvbmQJ5m0FLXfLA=="
+  "resolved" "https://registry.npmjs.org/@netlify/local-functions-proxy-linux-x64/-/local-functions-proxy-linux-x64-1.1.1.tgz"
   "version" "1.1.1"
 
 "@netlify/local-functions-proxy@^1.1.1":
@@ -953,9 +953,14 @@
   dependencies:
     "glob" "7.1.7"
 
-"@next/swc-win32-x64-msvc@12.1.6":
-  "integrity" "sha512-4ZEwiRuZEicXhXqmhw3+de8Z4EpOLQj/gp+D9fFWo6ii6W1kBkNNvvEx4A90ugppu+74pT1lIJnOuz3A9oQeJA=="
-  "resolved" "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.1.6.tgz"
+"@next/swc-linux-x64-gnu@12.1.6":
+  "integrity" "sha512-AC7jE4Fxpn0s3ujngClIDTiEM/CQiB2N2vkcyWWn6734AmGT03Duq6RYtPMymFobDdAtZGFZd5nR95WjPzbZAQ=="
+  "resolved" "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-12.1.6.tgz"
+  "version" "12.1.6"
+
+"@next/swc-linux-x64-musl@12.1.6":
+  "integrity" "sha512-c9Vjmi0EVk0Kou2qbrynskVarnFwfYIi+wKufR9Ad7/IKKuP6aEhOdZiIIdKsYWRtK2IWRF3h3YmdnEa2WLUag=="
+  "resolved" "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-12.1.6.tgz"
   "version" "12.1.6"
 
 "@nodelib/fs.scandir@2.1.5":

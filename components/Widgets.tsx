@@ -18,7 +18,7 @@ export default function Widgets({}: Props) {
         <TwitterTimelineEmbed
             sourceType="profile"
             // screenName="saurabhnemade"
-            screenName="sonnysangha"
+            screenName="elonmusk"
             options={{height: 1400}}
             />
     </div>
