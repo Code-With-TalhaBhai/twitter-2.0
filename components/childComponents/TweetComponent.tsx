@@ -12,7 +12,7 @@ interface Props {
 }
 
 export default function TweetComponent({tweet}: Props) {
-  // const {data:session} = useSession();
+  const {data:session} = useSession();
   const handleSubmit = (e:React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
     postComment();
@@ -20,14 +20,14 @@ export default function TweetComponent({tweet}: Props) {
     setInput('');
   };
   const postComment = async()=>{
-    // if(session){
+    if(session){
     const commentBody:CommentBody = {
       comment: input,
       username: 
-      // session?.user?.name ||
+      session?.user?.name ||
        '',
       image:
-      //  session?.user?.image || 
+       session?.user?.image || 
       '',
       tweet :{
         _ref: tweet._id,
@@ -43,11 +43,11 @@ export default function TweetComponent({tweet}: Props) {
       icon: "🚀"
     });
     setComments(await fetchComments(tweet._id));
-  // }
-  // else{
-  //   toast("You need to login to add Comment",
-  //   {icon:"🎇"});
-  // }
+  }
+  else{
+    toast("You need to login to add Comment",
+    {icon:"🎇"});
+  }
   }
 
   const [input, setInput] = useState<string>('')

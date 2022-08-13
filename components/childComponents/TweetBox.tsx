@@ -25,14 +25,14 @@ export default function TweetBox({setTweets}: Props) {
     }
 
     const postTweet = async()=>{
-        // if(session){
+        if(session){
         const tweetBody : TweetBody = {
             tweet: happening,
             username:
-            //  session?.user?.name ||  
+             session?.user?.name ||  
             'Userknown User',
             mainImage:
-            //  session?.user?.image ||
+             session?.user?.image ||
              'https://links.papareact.com/gll',
             tweetImage: imageTweet
         }
@@ -50,11 +50,11 @@ export default function TweetBox({setTweets}: Props) {
         icon:"🚀"}
         )
         return json;
-        // }
-        // else{
-        //     toast("You need to login to post Tweet",
-        //     {icon:"🎇"});
-        //   }
+        }
+        else{
+            toast("You need to login to post Tweet",
+            {icon:"🎇"});
+          }
     }
 
     const handleSubmit = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
@@ -88,8 +88,8 @@ export default function TweetBox({setTweets}: Props) {
                 <CalendarIcon/>
                 <LocationMarkerIcon/>
             </div>
-            {/* <button onClick={handleSubmit} disabled={(!happening && !imageTweet) || !session} className='bg-twitter cursor-pointer text-white font-bold rounded-full px-5 py-2 disabled:opacity-40'>Tweet</button> */}
-            <button onClick={handleSubmit} disabled={(!happening && !imageTweet)} className='bg-twitter cursor-pointer text-white font-bold rounded-full px-5 py-2 disabled:opacity-40'>Tweet</button>
+            <button onClick={handleSubmit} disabled={(!happening && !imageTweet) || !session} className='bg-twitter cursor-pointer text-white font-bold rounded-full px-5 py-2 disabled:opacity-40'>Tweet</button>
+            {/* <button onClick={handleSubmit} disabled={(!happening && !imageTweet)} className='bg-twitter cursor-pointer text-white font-bold rounded-full px-5 py-2 disabled:opacity-40'>Tweet</button> */}
             </div>
         </form>
         {imgBoxOpen &&
